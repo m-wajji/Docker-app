@@ -9,7 +9,7 @@ services:
             - "27017:27017"
 
     backend:
-        build: ./backend
+        image: mwajahat/my-backend:latest
         container_name: backend
         restart: always
         environment:
@@ -21,7 +21,7 @@ services:
             - mongo
 
     frontend:
-        build: ./frontend
+        image: mwajahat/my-frontend:latest
         container_name: frontend
         restart: always
         ports:
